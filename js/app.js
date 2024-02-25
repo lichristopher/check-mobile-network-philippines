@@ -154,11 +154,13 @@ const data = {
 
 const input = document.getElementsByTagName('input')[0];
 const button = document.getElementsByTagName('button')[0];
+const form = document.querySelector('form');
 const result = document.getElementsByClassName('result')[0];
 const image = document.querySelector('img');
 input.focus();
 
-button.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   const value = input.value;
   if (value.length < 4) {
     result.innerHTML = 'Invalid input';
