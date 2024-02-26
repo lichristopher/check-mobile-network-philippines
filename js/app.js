@@ -157,10 +157,11 @@ const button = document.getElementsByTagName('button')[0];
 const form = document.querySelector('form');
 const result = document.getElementsByClassName('result')[0];
 const image = document.querySelector('img');
+const audio = document.querySelector('audio');
 input.focus();
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  audio.play();
   const value = input.value;
   if (value.length < 4) {
     result.innerHTML = 'Invalid input';
